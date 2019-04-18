@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@drawable/z">
+
+    <SurfaceView
+        android:id="@+id/surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_rectangle_gray"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/start">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/start"
+            android:layout_marginBottom="176dp">
+
+            <TextView
+                android:id="@+id/image_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Use the floating action button to select an image."
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/start" />
+
+            <ImageView
+                android:id="@+id/main_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitCenter"
+                android:layout_alignTop="@+id/stop"
+                android:layout_toEndOf="@+id/camera" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:text=" "
+        android:background="@drawable/stop"
+        android:textColor="#FDF5E6"
+        android:id="@+id/stop"
+        android:layout_width="160px"
+        android:layout_height="160px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/start" />
+
+    <Button
+        android:text=" "
+        android:id="@+id/start"
+        android:background="@drawable/start"
+        android:textColor="#FDF5E6"
+        android:layout_height="160px"
+        android:layout_width="160px"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text=" "
+        android:background="@drawable/camera"
+        android:textColor="#FDF5E6"
+        android:id="@+id/camera"
+        android:layout_width="160px"
+        android:layout_height="160px"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Off"
+        android:textOn="On"
+        android:id="@+id/open"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp"
+        android:checked="true" />
+
+</RelativeLayout>
