@@ -70,7 +70,7 @@ Voting機制：接著為了將誤判降到最低，我們利用 Voting 機制，
 <img src="https://github.com/veryjimmy/Traffic_jam/blob/master/picture/ex10.jpg" width="150px" align=center />
 
 其中 i＝距離參考點五公尺內的車禍事件數量、R＝總體車禍事件偵測機率。最後，如果 R 大於 β，則表示此車禍事件成立，如公式所示：
-<br/>
+<br/><br/>
 <img src="https://github.com/veryjimmy/Traffic_jam/blob/master/picture/ex11.jpg" width="200px" align=center />
 
 其中 D＝群體車禍事件偵測結果。在進行 Voting 運算之前，我們根據整體的數據大致分為兩類情況：__僅少量照片測出車禍且機率偏低的特殊情況__ 以及 __多數測出機率且機率高之情況__。為了避免前者被誤判為車禍，我們採用自動化設置參數，對以上兩種情況定義不同的 α、β 值，以利 Voting 機制的計算，如公式所示：
