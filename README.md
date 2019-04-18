@@ -62,18 +62,18 @@ __MongoDB資料庫：__ 在資料庫的搭建中，我們使用MongoDB資料庫�
 
 Voting機制：接著為了將誤判降到最低，我們利用 Voting 機制，少數服從多數原則，可以避免 Google Cloud Vision API 的偵測能力不足與誤判的情況。我們把距離參考點五公尺內的數據篩選出來後，將數據中機率值大於 α 的全表示為 1，其餘表示為 0，如公式所示：
 
-<img src="https://github.com/veryjimmy/Traffic_jam/blob/master/picture/ex9.jpg" width="100px" align=center />
+<img src="https://github.com/veryjimmy/Traffic_jam/blob/master/picture/ex9.jpg" width="200px" align=center />
 
 其中Pi＝此張照片之車禍事件機率值、Si＝此張照片之車禍事件結果。再將上式中得到的數據加總，除以距離參考點五公尺內的車禍事件數量，如公式所示：
 
-<img src="https://github.com/veryjimmy/Traffic_jam/blob/master/picture/ex10.jpg" width="200px" align=center />
+<img src="https://github.com/veryjimmy/Traffic_jam/blob/master/picture/ex10.jpg" width="150px" align=center />
 
 其中 i＝距離參考點五公尺內的車禍事件數量、R＝總體車禍事件偵測機率。最後，如果 R 大於 β，則表示此車禍事件成立，如公式所示：
 
-<img src="https://github.com/veryjimmy/Traffic_jam/blob/master/picture/ex11.jpg" width="450px" align=center />
+<img src="https://github.com/veryjimmy/Traffic_jam/blob/master/picture/ex11.jpg" width="200px" align=center />
 
 其中 D＝群體車禍事件偵測結果。在進行 Voting 運算之前，我們根據整體的數據大致分為兩類情況：__僅少量照片測出車禍且機率偏低的特殊情況__ 以及 __多數測出機率且機率高之情況__。為了避免前者被誤判為車禍，我們採用自動化設置參數，對以上兩種情況定義不同的 α、β 值，以利 Voting 機制的計算，如公式所示：
-<img src="https://github.com/veryjimmy/Traffic_jam/blob/master/picture/ex12.jpg" width="200px" align=center />
+<img src="https://github.com/veryjimmy/Traffic_jam/blob/master/picture/ex12.jpg" width="400px" align=center />
 
 雲端標記：因為偵測到車禍的位置與實際發生車禍的位置會有誤差，所以在標記車禍地點前我們利用三角定位演算法，以減少偵測到車禍的位置與實際發生車禍的位置的誤差，使標記地點與實際地點較為相近，如下圖所示。
 
