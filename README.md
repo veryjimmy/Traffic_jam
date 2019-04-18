@@ -54,6 +54,7 @@ __MongoDB資料庫：__ 在資料庫的搭建中，我們使用MongoDB資料庫�
 <img src="https://github.com/veryjimmy/Traffic_jam/blob/master/picture/ex6.jpg" width="500px" align=center />
 
 雲端運算與裁決架構取得本系統上傳的資料後，會先選出第一筆數據作為參考點，並使用 Haversine 公式找出距離參考點五公尺內的數據，Haversine 公式如以下公式所示：
+
 <img src="https://github.com/veryjimmy/Traffic_jam/blob/master/picture/ex7.jpg" align=center />
 
 其中𝑅＝地球半徑，𝑑＝距離，Δφ＝兩點緯度的差值，φ＝緯度，Δλ＝兩點經度的差值，透過 Haversine 公式篩選出距離參考點五公尺內的數據，如下圖所示。
